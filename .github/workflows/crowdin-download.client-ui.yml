@@ -1,9 +1,13 @@
 name: i18n - Download Client UI
 on:
   workflow_dispatch:
-  schedule:
-    # runs Monday and Wednesday at 12:15 PM UTC
-    - cron: '15 12 * * 1,3'
+  # Schedule disabled - fork does not have required Crowdin secrets
+  # (CROWDIN_CAMPERBOT_PAT, CROWDIN_CAMPERBOT_SERVICE_TOKEN, CROWDIN_PROJECT_ID_CLIENT,
+  # CROWDIN_BASE_URL_FCC, ACTIONS_CAMPERBOT_EMAIL).
+  # To re-enable, uncomment the schedule block below and configure the secrets.
+  # schedule:
+  #   # runs Monday and Wednesday at 12:15 PM UTC
+  #   - cron: '15 12 * * 1,3'
 
 env:
   GITHUB_TOKEN: ${{ secrets.CROWDIN_CAMPERBOT_PAT }}
