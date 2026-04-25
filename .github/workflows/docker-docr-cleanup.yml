@@ -1,8 +1,11 @@
 name: CD - Docker - DOCR Cleanup Container Images
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '5 0 * * 3,6' # 12:05 UTC on Wednesdays and Saturdays (6 hour maintenance window)
+  # Schedule disabled - fork does not have required DigitalOcean secret
+  # (DIGITALOCEAN_ACCESS_TOKEN).
+  # To re-enable, uncomment the schedule block below and configure the secret.
+  # schedule:
+  #   - cron: '5 0 * * 3,6' # 12:05 UTC on Wednesdays and Saturdays (6 hour maintenance window)
 
 jobs:
   remove:
