@@ -1,8 +1,9 @@
 name: CD - Docker - DOCR Cleanup Container Images
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '5 0 * * 3,6'
+  # Schedule disabled on fork - required secrets/permissions not available here.
+  # schedule:
+  #  - cron: '5 0 * * 3,6'
 
 jobs:
   remove:
